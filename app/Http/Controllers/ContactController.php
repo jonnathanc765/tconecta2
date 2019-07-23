@@ -39,7 +39,7 @@ class ContactController extends Controller
         // Correo para tconecta
 
         $to_name    = $data['name'];
-        $to_email   = $data['email'];
+        $to_email   = 'ana.pereza@gmail.com';
         $emailData  = $data;
             
         Mail::send('emails.provider', $emailData, function($message) use ($to_name, $to_email) {
