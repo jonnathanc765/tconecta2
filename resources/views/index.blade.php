@@ -16,24 +16,33 @@
 
             <div class="col-md-6 col-lg-6">
                 <div class="form">
-                    <form action="sendMail.php" method="POST">
-
+                    <div class="alert alert-danger">
+                        <ul>
+                            @if ($errors->any())
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach 
+                            @endif
+                        </ul>
+                    </div>
+                    <form action="{{ route('mails.store') }}" method="POST">
+                        {{ csrf_field() }}
                         <div class="inputs">
                             <div class="form-group">
                                 <label for="name">Nombre</label>
-                                <input type="text" class="form-control" id="name" placeholder="Ej: Pedro Pérez">
+                                <input type="text" class="form-control" id="name" placeholder="Ej: Pedro Pérez" name="name">
                             </div>
                             <div class="form-group">
                                 <label for="city">Ciudad</label>
-                                <input type="text" class="form-control" id="city" placeholder="Ej: Valencia">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Correo</label>
-                                <input type="text" class="form-control" id="email" placeholder="Ej: 04121739590">
+                                <input type="text" class="form-control" id="city" placeholder="Ej: Valencia" name="city">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Teléfono</label>
-                                <input type="text" class="form-control" id="phone" placeholder="Ej: pedroperez@gmail.com">
+                                <input type="text" class="form-control" id="phone" placeholder="Ej: 04121739590" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo</label>
+                                <input type="text" class="form-control" id="email" placeholder="Ej: pedroperez@gmail.com" name="email">
                             </div>
                         </div>
                         <div class="button-container">

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class MailTableSeeder extends Seeder
+class ContactTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,8 +11,8 @@ class MailTableSeeder extends Seeder
      */
     public function run()
     {
-        App\Mail::truncate();
+        App\Contact::truncate();
 
-        factory(App\Mail::class, 150)->create();
+        factory(App\Contact::class, 150)->create();
     }
 }

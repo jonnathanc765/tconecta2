@@ -36,14 +36,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($mails as $mail)
+                        @foreach ($contacts as $contact)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $mail->name }}</td>
-                                <td>{{ $mail->email }}</td>
-                                <td>{{ $mail->city }}</td>
-                                <td>{{ $mail->phone }}</td>
-                                <td>{{ $mail->created_at->format('d/m/Y, h:m') }}</td>
+                                <td>{{ $contact->name }}</td>
+                                <td>{{ $contact->email }}</td>
+                                <td>{{ $contact->city }}</td>
+                                <td>{{ $contact->phone }}</td>
+                                <td>{{ $contact->created_at->format('d/m/Y, h:m') }}</td>
                             </tr>
                         @endforeach
                     </tbody>

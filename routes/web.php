@@ -27,9 +27,10 @@ Route::get('/register', function ()
     return abort(404);
 });
 
-Route::prefix('mails')->group(function ()
+Route::prefix('contacts')->group(function ()
 {
-    Route::get('/', 'MailController@index')->name('mails.index');
+    Route::get('/', 'ContactController@index')->name('mails.index');
+    Route::post('/store', 'ContactController@store')->name('mails.store');
 });
 
 
