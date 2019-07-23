@@ -11,6 +11,8 @@
     <meta name="theme-color" content="#f15c22"">
     <link rel="shortcut icon" href="{{ asset('images/logo2.png') }}">
 
+    @yield('head')
+
     <title>@yield('title')</title>
 </head>
 <body>
@@ -25,6 +27,8 @@
     <script>
         AOS.init();
     </script>
+
+    @yield('scripts')
     
 </body>
 </html>

@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Auth::routes();
 
@@ -27,6 +27,9 @@ Route::get('/register', function ()
     return abort(404);
 });
 
-
+Route::prefix('mails')->group(function ()
+{
+    Route::get('/', 'MailController@index')->name('mails.index');
+});
 
 
