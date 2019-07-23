@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Contact;
+use Mail;
 
 class ContactController extends Controller
 {
@@ -16,28 +17,41 @@ class ContactController extends Controller
     {
 
         $data = $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|email|string',
-            'phone' => 'required|min:5',
-            'city' => 'required|min:5'
+            'name'      => 'required|string',
+            'email'     => 'required|email|string',
+            'phone'     => 'required|min:5',
+            'city'      => 'required|min:5'
         ]);
 
-        $to_name = $data['name'];
-        $to_email = $data['email'];
-        $data = array('name'=>"Sam Jose", "body" => "Test mail");
+        // Correo para el cliente
+
+        $to_name    = $data['name'];
+        $to_email   = $data['email'];
+        $emailData  = $data;
             
-        Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
+        Mail::send('emails.client', $emailData, function($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
-                    ->subject('Artisans Web Testing Mail');
-            $message->from('shopify765@gmail.com','Test tconecta');
+                    ->subject('Contacto T-Conecta');
+
+            $message->from('info@tconecta.com','Contacto T-Conecta');
         });
-        
 
-        $contact = Contact::create($data);
-        
-        dd($contact);
-        
+        // Correo para tconecta
 
+        $to_name    = $data['name'];
+        $to_email   = $data['email'];
+        $emailData  = $data;
+            
+        Mail::send('emails.provider', $emailData, function($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)
+                    ->subject('Contacto T-Conecta');
+
+            $message->from('info@tconecta.com','Contacto T-Conecta');
+        });
+
+        
+        Contact::create($data);
+    
         return view('contacts.success', compact('contact'));
     }
 }
