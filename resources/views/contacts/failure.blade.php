@@ -4,15 +4,14 @@
 .person-layer {
     position: absolute;
     z-index: 2;
-    left: 120px;
+    left: 225px;
 }
 .message-layer {
     position: absolute;
     z-index: 3;
-    left: 540px;
+    left: 500px;
     top: 195px;
 }
-
 @media (max-width: 600px) {
     .container {
         height: 100%;
@@ -36,7 +35,6 @@
         padding:20px;
     }
 }
-
 </style>
 
 @section('content')
@@ -44,11 +42,11 @@
         <div class="row">
 
             <div class="person-layer">
-                <img src="{{ asset('images/el.png') }}" alt="">
+                <img src="{{ asset('images/el2.png') }}" alt="">
             </div>
 
             <div class="message-layer">
-                <img src="{{ asset('images/messageone.png') }}" alt="">
+                <img src="{{ asset('images/messagetwo.png') }}" alt="">
             </div>
 
         </div>
