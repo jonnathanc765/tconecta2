@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,10 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    if (Auth::check()) {
+        return redirect()->route('mails.index');
+    }
+    return view('.index');
 })->name('home');
 
 Auth::routes();

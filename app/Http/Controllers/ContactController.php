@@ -39,7 +39,9 @@ class ContactController extends Controller
             });
 
         } catch (Exception $error) {
-            return view('contacts.failure');
+            if (count(Mail::failures()) > 0) {
+                return view('contacts.failure');
+            }
         }
             
 
@@ -57,7 +59,9 @@ class ContactController extends Controller
                 $message->from('shopify765@gmail.com','Contacto Tconecta');
             });
         } catch (Exception $error) {
-            return view('contacts.failure');
+            if (count(Mail::failures()) > 0) {
+                return view('contacts.failure');
+            }
         }
             
 

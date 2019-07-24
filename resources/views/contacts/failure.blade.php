@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Tconecta - Fallido')
+    
 <style>
 .person-layer {
     position: absolute;
