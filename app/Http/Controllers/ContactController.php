@@ -31,9 +31,9 @@ class ContactController extends Controller
             
         Mail::send('emails.client', $emailData, function($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
-                    ->subject('Contacto T-Conecta');
+                    ->subject('Contacto Tconecta');
 
-            $message->from('info@tconecta.com','Contacto T-Conecta');
+            $message->from('shopify765@gmail.com', 'Contacto Tconecta');
         });
 
         // Correo para tconecta
@@ -44,9 +44,9 @@ class ContactController extends Controller
             
         Mail::send('emails.provider', $emailData, function($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
-                    ->subject('Contacto T-Conecta');
+                    ->subject('Contacto Tconecta');
 
-            $message->from('info@tconecta.com','Contacto T-Conecta');
+            $message->from('shopify765@gmail.com','Contacto Tconecta');
         });
 
         

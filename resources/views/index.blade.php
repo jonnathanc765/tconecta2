@@ -16,15 +16,6 @@
 
             <div class="col-md-6 col-lg-6">
                 <div class="form">
-                    <div class="alert alert-danger">
-                        <ul>
-                            @if ($errors->any())
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach 
-                            @endif
-                        </ul>
-                    </div>
                     <form action="{{ route('mails.store') }}" method="POST">
                         {{ csrf_field() }}
                         <div class="inputs">
