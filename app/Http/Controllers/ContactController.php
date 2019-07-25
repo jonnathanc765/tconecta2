@@ -36,7 +36,7 @@ class ContactController extends Controller
             $message->to($to_email, $to_name)
                     ->subject('Contacto Tconecta');
 
-            $message->from('shopify765@gmail.com', 'Contacto Tconecta');
+            $message->from('info@wc-design.blockshift.network', 'Contacto Tconecta');
         });
 
         if( count(Mail::failures()) > 0 ) {
@@ -54,7 +54,7 @@ class ContactController extends Controller
             $message->to($to_email, $to_name)
                     ->subject('Contacto Tconecta');
 
-            $message->from('shopify765@gmail.com','Contacto Tconecta');
+            $message->from('info@wc-design.blockshift.network','Contacto Tconecta');
         });
 
         if (count(Mail::failures()) > 0) {
