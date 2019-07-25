@@ -10,7 +10,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::all();
+        $contacts = Contact::orderBy('created_at', 'DESC')->get();
         return view('contacts.index', compact('contacts'));
     }
     public function store(Request $request)

@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('.index');
 })->name('home');
 
+Route::get('/home', function () {
+    return redirect()->route('home');
+});
+
 Auth::routes();
 
 Route::get('/admin', function ()

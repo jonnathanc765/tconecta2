@@ -43,7 +43,7 @@
                                 <td>{{ $contact->email }}</td>
                                 <td>{{ $contact->city }}</td>
                                 <td>{{ $contact->phone }}</td>
-                                <td>{{ $contact->created_at->format('d/m/Y, h:m') }}</td>
+                                <td>{{ $contact->created_at->format('d/m/Y g:i a') }}</td>
                             </tr>
                         @endforeach
                     </tbody>
