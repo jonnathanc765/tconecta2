@@ -26,16 +26,19 @@ Route::get('/home', function () {
 
 Auth::routes();
 
+// Redireccionando al login
 Route::get('/admin', function ()
 {
     return redirect()->route('login');
 });
 
+// Anulando la ventana del registrara
 Route::get('/register', function ()
 {
     return abort(404);
 });
 
+// Rutas del contacto
 Route::prefix('contacts')->group(function ()
 {
     Route::get('/', 'ContactController@index')->name('mails.index');

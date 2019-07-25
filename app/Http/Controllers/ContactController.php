@@ -10,11 +10,13 @@ class ContactController extends Controller
 {
     public function index()
     {
+        // Se ordenan desde el mas nuevo
         $contacts = Contact::orderBy('created_at', 'DESC')->get();
         return view('contacts.index', compact('contacts'));
     }
     public function store(Request $request)
     {
+        // Se validan los datos que envia el cliente
 
         $data = $request->validate([
             'name'      => 'required|string',
@@ -65,7 +67,7 @@ class ContactController extends Controller
         }
             
 
-        
+        // Finalmente, si no surje ningun error, se guarda todo en la base de datos
         Contact::create($data);
     
         return view('contacts.success');
