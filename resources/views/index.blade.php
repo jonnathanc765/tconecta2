@@ -63,7 +63,7 @@
                 </div>
                 <div class="captions">
                     <h4>a prueba de fallas eléctricas</h4>
-                    <p>si tienes plantas, tendrás internet</p>
+                    <p>Si tienes plantas, tendrás internet.</p>
                 </div>
             </div>
 
@@ -94,7 +94,7 @@
                 </div>
                 <div class="captions">
                     <h4>Incluye linea telefónica</h4>
-                    <p>Para tus puntos de venta</p>
+                    <p>Para tus puntos de venta.</p>
                 </div>
             </div>
             <div class="col-md-4 resource-item" data-aos="fade-right">
@@ -103,7 +103,7 @@
                 </div>
                 <div class="captions">
                     <h4>Instalacion en tiempo record</h4>
-                    <p>Con todos los equipos incluidos que necesitas para estar conectado</p>
+                    <p>Con todos los equipos incluidos que necesitas para estar conectado.</p>
                 </div>
             </div>
             <div class="col-md-4 resource-item" data-aos="fade-left">
@@ -112,7 +112,7 @@
                 </div>
                 <div class="captions">
                     <h4>Avalado por los grandes</h4>
-                    <p>Respaldado por la plataforma de fibra óptica mas grande del país</p>
+                    <p>Respaldado por la plataforma de fibra óptica mas grande del país.</p>
                 </div>
             </div>
         </div>
