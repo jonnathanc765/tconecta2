@@ -32,21 +32,17 @@ class ContactController extends Controller
         $emailData  = $data;
         
         
-        try {
-            
-            Mail::send('emails.client', $emailData, function($message) use ($to_name, $to_email) {
-                $message->to($to_email, $to_name)
-                        ->subject('Contacto Tconecta');
-    
-                $message->from('shopify765@gmail.com', 'Contacto Tconecta');
-            });
+        Mail::send('emails.client', $emailData, function($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)
+                    ->subject('Contacto Tconecta');
 
-        } catch (Exception $error) {
-            if (count(Mail::failures()) > 0) {
-                return view('contacts.failure');
-            }
+            $message->from('shopify765@gmail.com', 'Contacto Tconecta');
+        });
+
+        if( count(Mail::failures()) > 0 ) {
+            return view('contacts.failure');
         }
-            
+       
 
         // Correo para tconecta
 
@@ -54,18 +50,17 @@ class ContactController extends Controller
         $to_email   = 'shopify765@gmail.com';
         $emailData  = $data;
 
-        try {
-            Mail::send('emails.provider', $emailData, function($message) use ($to_name, $to_email) {
-                $message->to($to_email, $to_name)
-                        ->subject('Contacto Tconecta');
-    
-                $message->from('shopify765@gmail.com','Contacto Tconecta');
-            });
-        } catch (Exception $error) {
-            if (count(Mail::failures()) > 0) {
-                return view('contacts.failure');
-            }
+        Mail::send('emails.provider', $emailData, function($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)
+                    ->subject('Contacto Tconecta');
+
+            $message->from('shopify765@gmail.com','Contacto Tconecta');
+        });
+
+        if (count(Mail::failures()) > 0) {
+            return view('contacts.failure');
         }
+        
             
 
         // Finalmente, si no surje ningun error, se guarda todo en la base de datos

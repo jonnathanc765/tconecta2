@@ -25,7 +25,7 @@
                                     <div
                                         style="font-family:'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;color:rgba(0,0,0,0.87);line-height:32px;padding-bottom:5px;text-align:center;word-break:break-word">
                                         <div style="font-size:24px">
-                                            Gracias por contactarnos.
+                                            ¡Gracias por contactarnos!
                                         </div>
                                     </div>
                                     <div
