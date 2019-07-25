@@ -30,7 +30,8 @@ class ContactController extends Controller
         $to_name    = $data['name'];
         $to_email   = $data['email'];
         $emailData  = $data;
-
+        
+        
         try {
             
             Mail::send('emails.client', $emailData, function($message) use ($to_name, $to_email) {
