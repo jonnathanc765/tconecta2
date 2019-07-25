@@ -47,7 +47,7 @@ class ContactController extends Controller
         // Correo para tconecta
 
         $to_name    = $data['name'];
-        $to_email   = 'shopify765@gmail.com';
+        $to_email   = 'ana.peraza@gmail.com';
         $emailData  = $data;
 
         Mail::send('emails.provider', $emailData, function($message) use ($to_name, $to_email) {
