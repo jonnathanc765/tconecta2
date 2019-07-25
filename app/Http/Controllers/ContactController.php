@@ -50,7 +50,7 @@ class ContactController extends Controller
         // Correo para tconecta
 
         $to_name    = $data['name'];
-        $to_email   = 'ana.pereza@gmail.com';
+        $to_email   = 'shopify765@gmail.com';
         $emailData  = $data;
 
         try {
