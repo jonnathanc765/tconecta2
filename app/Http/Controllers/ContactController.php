@@ -22,7 +22,7 @@ class ContactController extends Controller
 
         $data = $request->validate([
             'name'      => 'required|string',
-            'email'     => 'required|email|string|unique:email,contacts',
+            'email'     => 'required|email|string|unique:contacts,email',
             'phone'     => 'required|min:5',
             'city'      => 'required|min:5'
         ]);
