@@ -142,7 +142,7 @@ footer .container .message h2 {
 }
 footer .container .message p {
     text-transform: uppercase;
-    text-align: center;
+    text-align: right;
 }
 footer .container .contact {
     padding: 55px 30px;
@@ -196,12 +196,14 @@ footer .container .contact .social-links a .fa {
     footer .container .message h2 {
         text-align: center;
     }
+    footer .container .message p {
+        text-align: center;
+    }
     footer .container .message {
         border:none;
-    }
-    footer .container .message {
         padding-bottom: 0;
     }
+    
     footer .container .social-links {
         text-align:center;
     }

@@ -4,13 +4,16 @@
     T-Conecta
 @endsection
 
+@section('head')
+    <link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
+@endsection
+
 @section('content')
 
 <header data-aos="zoom-in">
     <div class="container-fluid">
 
-      
-   
+        
         <div class="row">
 
             <div class="col-md-6 col-lg-6 d-flex justify-content-center align-items-end secundary-banner">
@@ -182,6 +185,13 @@
 @endsection
 
 @section('scripts')
-
+    
+    @if ($errors->any())
+    <script src="{{ asset('js/sweetalert.min.js') }}"></script>
+    <script>
+        swal('Tenemos un problema...', 'Debe llenar todos los campos correctamente',
+            'error');
+    </script>
+    @endif
 
 @endsection
