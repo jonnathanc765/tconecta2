@@ -53,7 +53,7 @@ class ContactController extends Controller
         }
 
         // Finalmente, si no surje ningun error, se guarda todo en la base de datos
-        Contact::create($data);
+        // Contact::create($data);
     
         return view('contacts.success');
     }
