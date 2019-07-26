@@ -8,6 +8,9 @@
 
 <header data-aos="zoom-in">
     <div class="container-fluid">
+
+      
+   
         <div class="row">
 
             <div class="col-md-6 col-lg-6 d-flex justify-content-center align-items-end secundary-banner">
@@ -21,19 +24,39 @@
                         <div class="inputs">
                             <div class="form-group">
                                 <label for="name">Nombre</label>
-                                <input type="text" class="form-control" id="name" placeholder="Ej: Pedro Pérez" name="name">
+                                <input type="text" value="{{ old('name') }}" class="form-control @error('name')is-invalid @enderror" id="name" placeholder="Ej: Pedro Pérez" name="name">
+                                @error('name')
+                                <div class="invalid-feedback" style="color: #fff;">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="city">Ciudad</label>
-                                <input type="text" class="form-control" id="city" placeholder="Ej: Valencia" name="city">
+                                <input type="text" value="{{ old('city') }}" class="form-control @error('city')is-invalid @enderror" id="city" placeholder="Ej: Valencia" name="city">
+                                @error('city')
+                                <div class="invalid-feedback" style="color: #fff;">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="phone">Teléfono</label>
-                                <input type="text" class="form-control" id="phone" placeholder="Ej: 04121739590" name="phone">
+                                <input type="text" value="{{ old('phone') }}" class="form-control @error('phone')is-invalid @enderror" id="phone" placeholder="Ej: 04121739590" name="phone">
+                                @error('phone')
+                                <div class="invalid-feedback" style="color: #fff;">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="email">Correo</label>
-                                <input type="text" class="form-control" id="email" placeholder="Ej: pedroperez@gmail.com" name="email">
+                                <input type="text" value="{{ old('email') }}" class="form-control @error('email')is-invalid @enderror" id="email" placeholder="Ej: pedroperez@gmail.com" name="email">
+                                @error('email')
+                                <div class="invalid-feedback" style="color: #fff;">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="button-container">
@@ -156,4 +179,9 @@
         </div>
     </div>
 </footer>
+@endsection
+
+@section('scripts')
+
+
 @endsection

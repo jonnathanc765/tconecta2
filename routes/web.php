@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    if (Auth::check()) {
-        return redirect()->route('mails.index');
-    }
     return view('.index');
 })->name('home');
 

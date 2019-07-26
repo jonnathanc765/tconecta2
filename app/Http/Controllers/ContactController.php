@@ -40,10 +40,22 @@ class ContactController extends Controller
         }
         
         
-        // Correo para tconecta
+        // Correo para mily
         
         $to_name    = $data['name'];
         $to_email   = 'mili.paris@inter.com.ve';
+        $emailData  = $data;
+        
+        try {
+            Mail::to($to_email)->send(new ProviderMail($data));
+        } catch (\Throwable $th) {
+            return view('contacts.failure');
+        }
+
+        // Correo para tconecta
+        
+        $to_name    = $data['name'];
+        $to_email   = 'Tconectainalambrico@gmail.com';
         $emailData  = $data;
         
         try {
