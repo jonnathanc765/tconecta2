@@ -30,7 +30,7 @@
                                     </div>
                                     <div
                                         style="font-family:Roboto-Regular,Helvetica,Arial,sans-serif;font-size:14px;color:rgba(0,0,0,0.87);line-height:20px;padding-top:20px;text-align:center;">
-                                        Te han contactado de {{ config('app.name') }}, estos son los datos del cliente:<br><br><br><br>
+                                        Te han contactado de {{ config('app.name') }}, estos son los datos del cliente:<br><br>
                                         <p style="text-align: center">
                                             Nombre: <br>
                                             <strong style="text-transform:capitalize;">{{ $data['name'] }}</strong>
