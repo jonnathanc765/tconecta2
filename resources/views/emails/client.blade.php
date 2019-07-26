@@ -30,7 +30,7 @@
                                     </div>
                                     <div
                                         style="font-family:Roboto-Regular,Helvetica,Arial,sans-serif;font-size:14px;color:rgba(0,0,0,0.87);line-height:20px;padding-top:20px;text-align:center;">
-                                        <strong>{{ $data['name'] }}</strong>, nos comunicaremos contigo a la brevedad posible para brindarte toda la información sobre nuestros planes y servicios.<br>
+                                        <strong>{{ ucfirst($data['name']) }}</strong>, nos comunicaremos contigo a la brevedad posible para brindarte toda la información sobre nuestros planes y servicios.<br>
                                         Horario de atencion de 8:00am a 5:00pm de Lunes a Viernes<br><br><br>
                                         
                                         <p style="text-align: center">
