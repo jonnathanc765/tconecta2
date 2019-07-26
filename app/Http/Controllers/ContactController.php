@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\ClientMail;
+use App\Mail\ProviderMail;
 use App\Contact;
 use Mail;
 
@@ -30,38 +32,25 @@ class ContactController extends Controller
         $to_name    = $data['name'];
         $to_email   = $data['email'];
         $emailData  = $data;
-        
-        
-        Mail::send('emails.client', $emailData, function($message) use ($to_name, $to_email) {
-            $message->to($to_email, $to_name)
-                    ->subject('Contacto Tconecta');
 
-            $message->from('info@wc-design.blockshift.network', 'Contacto Tconecta');
-        });
-
-        if( count(Mail::failures()) > 0 ) {
+        try {
+            Mail::to($to_email)->send(new ClientMail($data));
+        } catch (\Throwable $th) {
             return view('contacts.failure');
         }
-       
-
+        
+        
         // Correo para tconecta
-
+        
         $to_name    = $data['name'];
         $to_email   = 'ana.peraza@gmail.com';
         $emailData  = $data;
-
-        Mail::send('emails.provider', $emailData, function($message) use ($to_name, $to_email) {
-            $message->to($to_email, $to_name)
-                    ->subject('Contacto Tconecta');
-
-            $message->from('info@wc-design.blockshift.network','Contacto Tconecta');
-        });
-
-        if (count(Mail::failures()) > 0) {
+        
+        try {
+            Mail::to($to_email)->send(new ProviderMail($data));
+        } catch (\Throwable $th) {
             return view('contacts.failure');
         }
-        
-            
 
         // Finalmente, si no surje ningun error, se guarda todo en la base de datos
         Contact::create($data);

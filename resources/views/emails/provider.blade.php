@@ -33,14 +33,14 @@
                                         Te han contactado de {{ config('app.name') }}, estos son los datos del cliente:<br><br><br><br>
                                         <p style="text-align: center">
                                             Nombre: <br>
-                                            <strong>Jonnathan Carrasco</strong>
+                                            <strong>{{ $data['name'] }}</strong>
                                         </p>
                                         <p style="text-align: center">
                                         </p>
                                         <p>
-                                            Ciudad: Carora <br> 
-                                            Teléfono: 04126707006 <br>
-                                            Correo: jonna@gmail.com <br>    
+                                            Ciudad: {{ $data['city'] }} <br>
+                                            Teléfono: {{ $data['phone'] }} <br>
+                                            Correo: {{ $data['email'] }} <br>  
                                         </p>
 
                                         <div

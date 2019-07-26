@@ -2,13 +2,12 @@
 
 namespace App\Mail;
 
-use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ClientMail extends Mailable
+class ProviderMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -33,6 +32,6 @@ class ClientMail extends Mailable
     public function build()
     {
         return $this->subject('Contacto Tconecta')
-                    ->view('emails.client');
+                    ->view('emails.provider');
     }
 }
