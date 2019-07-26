@@ -86,7 +86,7 @@
                 </div>
                 <div class="captions">
                     <h4>a prueba de fallas eléctricas</h4>
-                    <p>Si tienes plantas, tendrás internet.</p>
+                    <p>Si tienes planta, tendrás internet.</p>
                 </div>
             </div>
 
@@ -107,7 +107,7 @@
                 </div>
                 <div class="captions">
                     <h4>Velocidad simétrica</h4>
-                    <p>Navega con la isma velocidad de subida y de bajada.</p>
+                    <p>Navega con la misma velocidad de subida y de bajada.</p>
                 </div>
             </div>
 
