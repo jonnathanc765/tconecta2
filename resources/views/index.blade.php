@@ -160,15 +160,15 @@
                 <div class="row">
                     <div class="col-md-6 social-links">
                         
-                        <a href="#">
+                        <a href="https://www.facebook.com/Tconectave-2354821491228249/?modal=admin_todo_tour" target="_blank">
                             <i class="fa fa-facebook" aria-hidden="true" style="padding: 0.5em 0.75em;"></i>
                             @TCONECTAVE
                         </a>
-                        <a href="#"> 
+                        <a href="https://www.instagram.com/tconectave/" target="_blank"> 
                             <i class="fa fa-instagram" aria-hidden="true"></i>
                             @TCONECTAVE
                         </a>
-                        <a href="#"> 
+                        <a href="bit.ly/2OaVYqO" target="_blank"> 
                             <i class="fa fa-whatsapp" aria-hidden="true" style="margin-right: 33px;"></i>
                             04123038070
                         </a>
