@@ -33,7 +33,7 @@
                                         Te han contactado de {{ config('app.name') }}, estos son los datos del cliente:<br><br><br><br>
                                         <p style="text-align: center">
                                             Nombre: <br>
-                                            <strong>{{ ucfirst($data['name']) }}</strong>
+                                            <strong style="text-transform:capitalize;">{{ $data['name'] }}</strong>
                                         </p>
                                         <p style="text-align: center">
                                         </p>
