@@ -27,6 +27,7 @@ Auth::routes();
 Route::get('/admin', function ()
 {
     return redirect()->route('login');
+
 });
 
 // Anulando la ventana del registrara
@@ -43,3 +44,9 @@ Route::prefix('contacts')->group(function ()
 });
 
 
+Route::prefix('clients')->group(function ()
+{
+    Route::get('/', 'ClientController@index')->name('clients.index');
+    Route::post('/store', 'ClientController@store')->name('clients.store');
+
+});
