@@ -14,7 +14,7 @@ class ContactController extends Controller
     {
         // Se ordenan desde el mas nuevo
         $contacts = Contact::orderBy('created_at', 'DESC')->get();
-        return view('contacts.index', compact('contacts'));
+        return view('backend.contacts.index', compact('contacts'));
     }
     public function store(Request $request)
     {
