@@ -16,8 +16,9 @@ class CreateClientsTable extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('user')->nullable();
-            $table->timestamp('contact_date')->nullable();
+            $table->date('contact_date')->nullable();
             $table->string('name')->nullable();
+            $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->enum('lead', ['Facebook','Instagram', 'WhatsApp', 'DM', 'Esperando Datos de Contacto'])->nullable();
             $table->text('comment')->nullable();

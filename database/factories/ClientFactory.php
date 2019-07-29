@@ -11,6 +11,7 @@ $factory->define(Client::class, function (Faker $faker) {
         'contact_date' => $faker->dateTime,
         'name' => $faker->name,
         'email' => $faker->safeEmail,
+        'phone' => $faker->phoneNumber,
         'lead' => 'Facebook',
         'comment' => $faker->sentence
     ];

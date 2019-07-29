@@ -119,7 +119,7 @@
                     <img src="{{ asset('images/icons/INCLUYE.png') }}" alt="">
                 </div>
                 <div class="captions">
-                    <h4>Incluye linea telefónica</h4>
+                    <h4>Incluye línea telefónica</h4>
                     <p>Para tus puntos de venta.</p>
                 </div>
             </div>
@@ -128,7 +128,7 @@
                     <img src="{{ asset('images/icons/INSTALACION-EN.png') }}" alt="">
                 </div>
                 <div class="captions">
-                    <h4>Instalacion en tiempo record</h4>
+                    <h4>Instalación en tiempo record</h4>
                     <p>Con todos los equipos incluidos que necesitas para estar conectado.</p>
                 </div>
             </div>
