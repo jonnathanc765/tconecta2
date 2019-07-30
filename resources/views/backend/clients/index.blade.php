@@ -24,8 +24,10 @@
                             <th scope="col">Fecha Contacto</th>
                             <th scope="col">Contactado desde</th>
                             <th scope="col">Ciudad</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Telefono</th>
                             <th scope="col">Comentarios</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,8 +39,14 @@
                                 <td>{{ $client->contact_date }}</td>
                                 <td>{{ $client->lead }}</td>
                                 <td>{{ $client->city }}</td>
+                                <td>
+                                    {{ $client->status }}
+                                </td>
                                 <td>{{ $client->phone }}</td>
                                 <td>{{ $client->comment }}</td>
+                                <td>
+                                    <a href="#" class="btn btn-info"></a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

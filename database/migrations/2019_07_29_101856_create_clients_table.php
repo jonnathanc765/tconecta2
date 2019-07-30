@@ -22,7 +22,7 @@ class CreateClientsTable extends Migration
             $table->string('city')->nullable();
             $table->string('email')->nullable();
             $table->enum('lead', ['Facebook','Instagram', 'WhatsApp', 'DM'])->nullable();
-            $table->enum('status', ['wait'])->default('wait')->nullable();
+            $table->enum('status', ['Contactar DM', 'Datos DM', 'Contactar WhatsApp', 'Datos WhatsApp', 'Enviar Correo', 'Por Llamar', 'Llamado Interesado', 'Llamado desinteresado'])->default('Contactar DM')->nullable();
             $table->text('comment')->nullable();
             $table->timestamps();
         });

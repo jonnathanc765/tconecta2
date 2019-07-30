@@ -61,6 +61,20 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="status">Status</label>
+                            <select name="status" id="status" class="form-control">
+                                <option value="" disabled selected>Seleccione</option>
+                                <option value="Contactar DM" {{ old('status') == 'Contactar DM' ? 'selected': '' }}>Por contactar DM</option>
+                                <option value="Datos DM" {{ old('status') == 'Datos DM' ? 'selected': '' }}>Datos solicitados por DM</option>
+                                <option value="Contactar WhatsApp" {{ old('status') == 'Contactar WhatsApp' ? 'selected': '' }}>Por contactar WhatsApp</option>
+                                <option value="Datos WhatsApp" {{ old('status') == 'Datos WhatsApp' ? 'selected': '' }}>Datos solicitados por WhatsApp</option>
+                                <option value="Enviar Correo" {{ old('status') == 'Enviar Correo' ? 'selected': '' }}>Poir enviar Email</option>
+                                <option value="Por Llamar" {{ old('status') == 'Por Llamar' ? 'selected': '' }}>Por llamar</option>
+                                <option value="Llamado Interesado" {{ old('status') == 'Llamado Interesado' ? 'selected': '' }}>Llamado interesado</option>
+                                <option value="Llamado desinteresado" {{ old('status') == 'Llamado desinteresado' ? 'selected': '' }}>Llamado no interesado</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="comment">Comentarios</label>
                             <textarea name="comment" class="form-control" id="comment" cols="10" rows="10">{{ old('comment') }}</textarea>
                         </div>
