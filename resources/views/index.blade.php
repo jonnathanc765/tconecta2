@@ -83,28 +83,36 @@
         </div>
 
         <div class="row mt-4 resources">
-            <div class="col-md-4 resource-item" data-aos="fade-right">
+            <div class="col-md-4 col-sm-6 resource-item" data-aos="fade-right">
                 <div class="text-center">
                     <img src="{{ asset('images/icons/A-PRUEBA-DE.png') }}" alt="">
                 </div>
                 <div class="captions">
                     <h4>a prueba de fallas eléctricas</h4>
-                    <p>Si tienes planta, tendrás internet.</p>
+                    <p>
+                        <span>
+                            Si tienes planta, tendrás internet.
+                        </span>
+                    </p>
                 </div>
             </div>
 
-            <div class="col-md-4 resource-item" data-aos="fade-left">
+            <div class="col-md-4 col-sm-6 resource-item" data-aos="fade-left">
                 <div class="text-center">
                     <img src="{{ asset('images/icons/SERVICIO-TECNICO.png') }}" alt="">
                 </div>
                 <div class="captions">
                     <h4>Servicio técnico garantizado</h4>
-                    <p>Atención VIP, con la velocidad que requiere tu negocio.</p>
+                    <p>
+                        <span>
+                            Atención VIP, con la velocidad que requiere tu negocio.
+                        </span>
+                    </p>
                 </div>
             </div>
            
 
-            <div class="col-md-4 resource-item" data-aos="fade-right">
+            <div class="col-md-4 col-sm-6 resource-item" data-aos="fade-right">
                 <div class="text-center">
                     <img src="{{ asset('images/icons/VELOCIDAD.png') }}" alt="">
                 </div>
@@ -114,7 +122,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 resource-item" data-aos="fade-left">
+            <div class="col-md-4 col-sm-6 resource-item" data-aos="fade-left">
                 <div class="text-center">
                     <img src="{{ asset('images/icons/INCLUYE.png') }}" alt="">
                 </div>
@@ -123,7 +131,7 @@
                     <p>Para tus puntos de venta.</p>
                 </div>
             </div>
-            <div class="col-md-4 resource-item" data-aos="fade-right">
+            <div class="col-md-4 col-sm-6 resource-item" data-aos="fade-right">
                 <div class="text-center">
                     <img src="{{ asset('images/icons/INSTALACION-EN.png') }}" alt="">
                 </div>
@@ -132,7 +140,7 @@
                     <p>Con todos los equipos incluidos que necesitas para estar conectado.</p>
                 </div>
             </div>
-            <div class="col-md-4 resource-item" data-aos="fade-left">
+            <div class="col-md-4 col-sm-6 resource-item" data-aos="fade-left">
                 <div class="text-center">
                     <img src="{{ asset('images/icons/AVALADOS.png') }}" alt="">
                 </div>

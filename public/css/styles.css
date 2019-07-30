@@ -113,12 +113,15 @@ section.main .container .resources .resource-item .captions p {
     text-align: center;
     font-family: "Avenir Regular";
     height: 100%;
-    min-height: 70px;
+    min-height: 80px;
     border-top: 1px solid #f15c22;
     border-bottom: 1px solid #f15c22;
     padding: 5px;
     font-weight: bolder;
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
