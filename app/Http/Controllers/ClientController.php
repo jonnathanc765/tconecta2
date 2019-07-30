@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Client;
+use Illuminate\Validation\Rule;
 
 class ClientController extends Controller
 {
@@ -62,7 +63,7 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -71,9 +72,9 @@ class ClientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Client $client)
     {
-        //
+        return view('backend.clients.edit', compact('client'));
     }
 
     /**
@@ -83,9 +84,24 @@ class ClientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Client $client)
     {
-        //
+        $data = $request->validate([
+            'user'          => ['required', Rule::unique('clients')->ignore($client->id)],
+            'name'          => '',
+            'contact_date'  => '',
+            'phone'         => '',
+            'city'          => '',
+            'email'         => '',
+            'lead'          => '',
+            'status'        => '',
+            'comment'       => ''
+         ]);
+
+        
+        $client->update($data);
+
+        return redirect()->route('clients.index')->withSuccess('Registrado Exitosamente');
     }
 
     /**

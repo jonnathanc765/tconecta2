@@ -15,7 +15,7 @@
             
             <a href="{{ route('clients.create') }}" class="btn btn-primary my-2">Agregar Nuevo Cliente</a>
             <div class="card shadow p-2">
-                <table class="table table-hover dataTable table-responsive">
+                <table class="table table-hover dataTable table-responsive text-center">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>
@@ -45,7 +45,7 @@
                                 <td>{{ $client->phone }}</td>
                                 <td>{{ $client->comment }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-info"></a>
+                                    <a href="{{ route('clients.edit', $client) }}" class="btn btn-info"><i class="fa fa-pencil"></i></a>
                                 </td>
                             </tr>
                         @endforeach

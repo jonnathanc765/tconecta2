@@ -49,7 +49,9 @@ Route::middleware(['auth'])->group(function ()
     {
         Route::get('/', 'ClientController@index')->name('clients.index');
         Route::get('/create', 'ClientController@create')->name('clients.create');
+        Route::get('/edit/{client}', 'ClientController@edit')->name('clients.edit');
         Route::post('/store', 'ClientController@store')->name('clients.store');
+        Route::put('/update/{client}', 'ClientController@update')->name('clients.update');
     
     });
 });
