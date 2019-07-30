@@ -39,15 +39,17 @@ Route::get('/register', function ()
 // Rutas del contacto
 Route::prefix('contacts')->group(function ()
 {
-    Route::get('/', 'ContactController@index')->name('mails.index');
+    Route::get('/', 'ContactController@index')->name('mails.index')->middleware('auth');
     Route::post('/store', 'ContactController@store')->name('mails.store');
 });
 
-
-Route::prefix('clients')->group(function ()
+Route::middleware(['auth'])->group(function ()
 {
-    Route::get('/', 'ClientController@index')->name('clients.index');
-    Route::get('/create', 'ClientController@create')->name('clients.create');
-    Route::post('/store', 'ClientController@store')->name('clients.store');
-
+    Route::prefix('clients')->group(function ()
+    {
+        Route::get('/', 'ClientController@index')->name('clients.index');
+        Route::get('/create', 'ClientController@create')->name('clients.create');
+        Route::post('/store', 'ClientController@store')->name('clients.store');
+    
+    });
 });
