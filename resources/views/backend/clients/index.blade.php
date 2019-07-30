@@ -4,6 +4,7 @@
 
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/datatable.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
 @endsection
 
 @section('content')
@@ -45,6 +46,11 @@
                                 <td>{{ $client->phone }}</td>
                                 <td>{{ $client->comment }}</td>
                                 <td>
+                                    <form action="{{ route('clients.destroy', $client) }}" id="form-{{ $loop->iteration }}" method="post">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="button" class="btn btn-danger" onclick="destroy({{ $loop->iteration }})"><i class="fa fa-trash"></i></button>
+                                    </form>
                                     <a href="{{ route('clients.edit', $client) }}" class="btn btn-info"><i class="fa fa-pencil"></i></a>
                                 </td>
                             </tr>
@@ -64,7 +70,27 @@
 @section('scripts')
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/datatable.min.js') }}"></script>
+
+    <script src="{{ asset('js/sweetalert2@8.js') }}"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script> --}}
     <script>
+
+        function destroy(id) {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¡No puedes revetir esta acción!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '¡Si, hazlo!'
+            }).then((result) => {
+                if (result.value) {
+                    console.log(id);
+                    document.getElementById('form-'+ id).submit();
+                }
+            })
+        }
 
         $(document).ready( function () {
             $('.dataTable').DataTable({
@@ -75,4 +101,16 @@
         });
     
     </script>
+
+    @if (Session::has('success'))
+    <script src="{{ asset('js/sweetalert.min.js') }}"></script>
+    <script>
+        Swal.fire({
+            type: 'success',
+            title: 'Exitoso',
+            text: "{{ Session::get('success') }}",
+            showConfirmButton: true,
+        })
+    </script>
+    @endif
 @endsection 

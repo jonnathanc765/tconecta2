@@ -211,9 +211,9 @@
 @section('scripts')
     
     @if ($errors->any())
-    <script src="{{ asset('js/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('js/sweetalert2@8.js') }}"></script>
     <script>
-        swal('Tenemos un problema...', 'Debe llenar todos los campos correctamente',
+        Swal.fire('Tenemos un problema...', 'Debe llenar todos los campos correctamente',
             'error');
     </script>
     @endif
