@@ -60,6 +60,10 @@
                                 <option value="DM" {{ old('lead') == 'DM' ? 'selected': '' }}>Mensaje directo</option>
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label for="comment">Comentarios</label>
+                            <textarea name="comment" class="form-control" id="comment" cols="10" rows="10">{{ old('comment') }}</textarea>
+                        </div>
                        
                         <button type="submit" class="btn btn-primary">Agregar</button>
                     </form>
