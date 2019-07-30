@@ -21,7 +21,8 @@ class CreateClientsTable extends Migration
             $table->string('phone')->nullable();
             $table->string('city')->nullable();
             $table->string('email')->nullable();
-            $table->enum('lead', ['Facebook','Instagram', 'WhatsApp', 'DM', 'Esperando Datos de Contacto'])->nullable();
+            $table->enum('lead', ['Facebook','Instagram', 'WhatsApp', 'DM'])->nullable();
+            $table->enum('status', ['wait'])->default('wait')->nullable();
             $table->text('comment')->nullable();
             $table->timestamps();
         });
