@@ -13,6 +13,7 @@ $factory->define(Client::class, function (Faker $faker) {
         'email' => $faker->safeEmail,
         'phone' => $faker->phoneNumber,
         'lead' => 'Facebook',
+        'city' => $faker->word,
         'comment' => $faker->sentence
     ];
 });

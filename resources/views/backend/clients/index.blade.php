@@ -23,6 +23,7 @@
                             <th scope="col">Nombre</th>
                             <th scope="col">Fecha Contacto</th>
                             <th scope="col">Contactado desde</th>
+                            <th scope="col">Ciudad</th>
                             <th scope="col">Telefono</th>
                             <th scope="col">Comentarios</th>
                         </tr>
@@ -35,6 +36,7 @@
                                 <td>{{ $client->name }}</td>
                                 <td>{{ $client->contact_date }}</td>
                                 <td>{{ $client->lead }}</td>
+                                <td>{{ $client->city }}</td>
                                 <td>{{ $client->phone }}</td>
                                 <td>{{ $client->comment }}</td>
                             </tr>
