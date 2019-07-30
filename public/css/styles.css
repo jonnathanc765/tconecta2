@@ -123,11 +123,9 @@ section.main .container .resources .resource-item .captions p {
     justify-content: center;
     align-items: center;
 }
-
 footer {
     background-color: #15103E;
 }
-
 footer .container {
     padding-top: 20px;
     padding-bottom: 20px;
