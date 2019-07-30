@@ -36,7 +36,21 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'user' => 'required|min:3',
+            'name' => '',
+            'contact_date' => '',
+            'phone' => '',
+            'email' => '',
+            'lead' => '',
+            'comment' => ''
+         ]);
+
+         $data['user'] = '@' . $data['user'];
+        
+        Client::create($data);
+
+        return redirect()->route('clients.index')->withSuccess('Registrado Exitosamente');
     }
 
     /**

@@ -13,9 +13,9 @@
         <div class="col-md-12">
             <h2 class="text-center">Lista de personas que han contactado</h2>
             
-            <a href="{{ route('clients.create') }}" class="btn btn-primary">Agregar Nuevo Cliente</a>
+            <a href="{{ route('clients.create') }}" class="btn btn-primary my-2">Agregar Nuevo Cliente</a>
             <div class="card shadow p-2">
-                <table class="table table-hover mt-3 dataTable">
+                <table class="table table-hover dataTable">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>
