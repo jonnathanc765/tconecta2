@@ -43,7 +43,7 @@ class ClientController extends Controller
             'phone' => '',
             'city' => '',
             'email' => '',
-            'lead' => 'in:WhatsApp,Facebook,Instagram,DM,Wait',
+            'lead' => '',
             'comment' => ''
          ]);
 

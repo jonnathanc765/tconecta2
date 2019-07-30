@@ -172,6 +172,7 @@ return [
         'time'                  => 'hora',
         'subject'               => 'asunto',
         'message'               => 'mensaje',
-        'user'                  => 'usuario'
+        'user'                  => 'usuario',
+        'lead'                  => 'contactado desde'
     ],
 ];
