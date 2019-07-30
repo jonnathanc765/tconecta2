@@ -103,7 +103,6 @@
     </script>
 
     @if (Session::has('success'))
-    <script src="{{ asset('js/sweetalert.min.js') }}"></script>
     <script>
         Swal.fire({
             type: 'success',
