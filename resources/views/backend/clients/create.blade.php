@@ -55,7 +55,7 @@
                             <select name="lead" id="lead" class="form-control">
                                 <option value="" disabled selected>Seleccione</option>
                                 <option value="Facebook" {{ old('lead') == 'Facebook' ? 'selected': '' }}>Facebook</option>
-                                <option value="Instragram" {{ old('lead') == 'Instragram' ? 'selected': '' }}>Instragram</option>
+                                <option value="Instagram" {{ old('lead') == 'Instagram' ? 'selected': '' }}>Instagram</option>
                                 <option value="WhatsApp" {{ old('lead') == 'WhatsApp' ? 'selected': '' }}>WhatsApp</option>
                                 <option value="DM" {{ old('lead') == 'DM' ? 'selected': '' }}>Mensaje directo</option>
                             </select>
