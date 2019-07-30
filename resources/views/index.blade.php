@@ -118,7 +118,11 @@
                 </div>
                 <div class="captions">
                     <h4>Velocidad simétrica</h4>
-                    <p>Navega con la misma velocidad de subida y de bajada.</p>
+                    <p>
+                        <span>
+                            Navega con la misma velocidad de subida y de bajada.
+                        </span>
+                    </p>
                 </div>
             </div>
 
@@ -128,7 +132,11 @@
                 </div>
                 <div class="captions">
                     <h4>Incluye línea telefónica</h4>
-                    <p>Para tus puntos de venta.</p>
+                    <p>
+                        <span>
+                            Para tus puntos de venta.
+                        </span>
+                    </p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 resource-item" data-aos="fade-right">
@@ -137,7 +145,11 @@
                 </div>
                 <div class="captions">
                     <h4>Instalación en tiempo record</h4>
-                    <p>Con todos los equipos incluidos que necesitas para estar conectado.</p>
+                    <p>
+                        <span>
+                            Con todos los equipos incluidos que necesitas para estar conectado.
+                        </span>
+                    </p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 resource-item" data-aos="fade-left">
@@ -146,7 +158,11 @@
                 </div>
                 <div class="captions">
                     <h4>Avalado por los grandes</h4>
-                    <p>Respaldado por la plataforma de fibra óptica mas grande del país.</p>
+                    <p>
+                        <span>
+                            Respaldado por la plataforma de fibra óptica mas grande del país.
+                        </span>
+                    </p>
                 </div>
             </div>
         </div>
