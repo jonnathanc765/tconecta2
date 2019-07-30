@@ -15,7 +15,7 @@
             
             <a href="{{ route('clients.create') }}" class="btn btn-primary my-2">Agregar Nuevo Cliente</a>
             <div class="card shadow p-2">
-                <table class="table table-hover dataTable">
+                <table class="table table-hover dataTable table-responsive">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>

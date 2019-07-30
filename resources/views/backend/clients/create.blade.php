@@ -43,6 +43,10 @@
                             <input type="text" class="form-control" name="phone" value="{{ old('phone') }}">
                         </div>
                         <div class="form-group">
+                            <label for="phone">Cuidad</label>
+                            <input type="text" class="form-control" name="city" value="{{ old('city') }}">
+                        </div>
+                        <div class="form-group">
                             <label for="email">Correo</label>
                             <input type="text" class="form-control" name="email" value="{{ old('email') }}">
                         </div>

@@ -19,6 +19,7 @@ class CreateClientsTable extends Migration
             $table->string('name')->nullable();
             $table->date('contact_date')->nullable();
             $table->string('phone')->nullable();
+            $table->string('city')->nullable();
             $table->string('email')->nullable();
             $table->enum('lead', ['Facebook','Instagram', 'WhatsApp', 'DM', 'Esperando Datos de Contacto'])->nullable();
             $table->text('comment')->nullable();

@@ -41,6 +41,7 @@ class ClientController extends Controller
             'name' => '',
             'contact_date' => '',
             'phone' => '',
+            'city' => '',
             'email' => '',
             'lead' => '',
             'comment' => ''
