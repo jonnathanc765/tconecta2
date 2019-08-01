@@ -1,5 +1,6 @@
 @extends('backend.layouts.app')
 
+@section('nav.clients', 'active')
 @section('title', 'Registrar nuevo cliente')
 
 

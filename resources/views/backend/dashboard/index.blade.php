@@ -1,8 +1,10 @@
 @extends('backend.layouts.app')
 
 @section('title', 'Lista de Contactos')
+@section('nav.dashboard', 'active')
 
 @section('head')
+<link rel="stylesheet" href="{{ asset('css/Chart.min.css') }}">
 @endsection
 
 @section('content')
@@ -15,6 +17,6 @@
 @endsection
 @section('scripts')
 
-<script src=""></script>
+<script src="{{ asset('js/Chart.min.js') }}"></script>
 
 @endsection

@@ -55,4 +55,8 @@ Route::middleware(['auth'])->group(function ()
         Route::delete('/destroy/{client}', 'ClientController@destroy')->name('clients.destroy');
     
     });
+    Route::prefix('dashboard')->group(function ()
+    {
+        Route::get('/', 'DashboardController@index')->name('dashboard.index');
+    });
 });

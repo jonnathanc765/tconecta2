@@ -1,6 +1,7 @@
 @extends('backend.layouts.app')
 
 @section('title', 'Lista de Contactos')
+@section('nav.mails', 'active')
 
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/datatable.min.css') }}">
