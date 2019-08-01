@@ -36,7 +36,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="city">Ciudad</label>
-                                <input type="text" value="{{ old('city') }}" class="form-control @error('city')is-invalid @enderror" id="city" placeholder="Ej: Valencia" name="city">
+                                <select class="form-control @error('city')is-invalid @enderror" id="city" name="city">
+                                    <option value="" disabled selected>Elija una ciudad</option>
+                                    @foreach(App\City::orderBy('name','ASC')->get() as $city)
+                                    <option value="{{ $city->name }}">{{ $city->name }}</option>
+                                    @endforeach
+                                </select>
+                                <!-- <input type="text" value="{{ old('city') }}" class="form-control @error('city')is-invalid @enderror" id="city" placeholder="Ej: Valencia" name="city"> -->
                                 @error('city')
                                 <div class="invalid-feedback" style="color: #fff;">
                                     {{ $message }}
