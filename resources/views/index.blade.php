@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    T-Conecta
+    Internet de 20 Megas Simétrico
 @endsection
 
 @section('head')
