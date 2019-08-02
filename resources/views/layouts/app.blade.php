@@ -22,6 +22,18 @@
         gtag('config', 'UA-144841151-2');
     </script>
 
+    <title>{{ config('app.name') }} - @yield('title')</title> 
+    <meta name="robots" content="index,follow" />
+    <meta name="google" content="notranslate" /> 
+    <meta name="description" content="TConecta - Internet inalambrico de 20 megas simétrico" />
+    <meta name="keywords" content="intenert, inalambrico, simetrico, rapido, veloz conexion, electricidad, interconexión"/>
+    <meta name="title" content="{{ config('app.name') }} - @yield('title')" />
+    <meta name="language" content="es" />
+    <meta name="revisit-after" content="1 week" />
+    <meta name="rating" content="General" />
+    <meta name="author" content="La Machine" />
+    <meta name="owner" content="Tconecta" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -35,7 +47,6 @@
 
     @yield('head')
 
-    <title>@yield('title')</title>
 </head>
 <body>
     

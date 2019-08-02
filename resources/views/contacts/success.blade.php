@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Tconecta - Exitoso')
+@section('title', 'Exitoso')
 
 <style>
 .person-layer {
