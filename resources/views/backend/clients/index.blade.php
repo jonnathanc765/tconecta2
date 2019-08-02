@@ -4,7 +4,7 @@
 @section('nav.clients', 'active')
 
 @section('head')
-    <link rel="stylesheet" href="{{ asset('css/datatable.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('datatables/datatables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
 @endsection
 
@@ -70,10 +70,9 @@
 
 @section('scripts')
     <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/datatable.min.js') }}"></script>
+    <script src="{{ asset('datatables/datatables.min.js') }}"></script>
 
     <script src="{{ asset('js/sweetalert2@8.js') }}"></script>
-    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script> --}}
     <script>
 
         function destroy(id) {
