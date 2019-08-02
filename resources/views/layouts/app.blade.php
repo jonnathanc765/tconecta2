@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <meta name="theme-color" content="#f15c22"">
+    <meta name="theme-color" content="#f15c22">
     <link rel="shortcut icon" href="{{ asset('images/logo2.png') }}">
 
 
