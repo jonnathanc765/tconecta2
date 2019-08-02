@@ -15,6 +15,9 @@
                 <h2 class="text-center">
                     Registrados por Mes
                 </h2>
+                <div class="row">
+                    <div class="col-md-12"></div>
+                </div>
                 <canvas id="monthChart" width="400" height="250"></canvas>
             </div>
         </div>
@@ -25,6 +28,7 @@
 @section('scripts')
 
     <script src="{{ asset('js/Chart.min.js') }}"></script>
+
     <script>
         var colors = [
             '#F44336',
@@ -320,20 +324,15 @@
 
                 data: {
                     labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-                    datasets: [{
-                        label: '2019',
-                        data: [12, 19, 3, 17, 6, 3, 7, 5, 7, 0, 10, 12],
-
-                        backgroundColor: "rgba(89, 105, 255,0.5)",
-                        borderColor: "rgba(89, 105, 255,0.7)",
-                        borderWidth: 2
-                    }, {
-                        label: '2018',
-                        data: [2, 29, 5, 5, 2, 3, 10, 12, 19, 3, 17, 6,],
-                        backgroundColor: "rgba(255, 64, 123,0.5)",
-                        borderColor: "rgba(255, 64, 123,0.7)",
-                        borderWidth: 2
-                    }]
+                    datasets: [
+                        {
+                            label: '2019',
+                            data: [12, 19, 3, 17, 6, 3, 7, 5, 7, 0, 10, 12],
+                            backgroundColor: "rgba(89, 105, 255,0.5)",
+                            borderColor: "rgba(89, 105, 255,0.7)",
+                            borderWidth: 2
+                        }
+                    ]
 
                 },
                 options: {

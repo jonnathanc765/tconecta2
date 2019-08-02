@@ -14,6 +14,7 @@ $factory->define(Client::class, function (Faker $faker) {
         'phone' => $faker->phoneNumber,
         'lead' => 'Facebook',
         'city' => $faker->word,
-        'comment' => $faker->sentence
+        'comment' => $faker->sentence,
+        'created_at' => $faker->dateTimeBetween('-1 years')
     ];
 });
