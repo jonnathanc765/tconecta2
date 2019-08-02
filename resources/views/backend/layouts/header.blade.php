@@ -7,6 +7,9 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
+    @if (Auth::check())
+        
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item @yield('nav.clients')">
@@ -38,5 +41,6 @@
             <a href="#" class="text-white" onclick="getElementById('logout-form').submit()">Cerrar Sesión</a>
         </form>
     </div>
+    @endif
 
 </nav>
