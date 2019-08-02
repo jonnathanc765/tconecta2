@@ -4,16 +4,16 @@
 @section('nav.mails', 'active')
 
 @section('head')
-    <link rel="stylesheet" href="{{ asset('css/datatable.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/datatable.min.css') }}"> --}}
 @endsection
 
 @section('content')
     
-<div class="container mt-4 mb-5">
+<div class="container-fluid mt-4 mb-5">
     
     <div class="row">
         <div class="col-md-12">
-                <h2 class="text-center">Lista de personas que han contactado</h2>
+                <h2 class="">Lista de personas que han contactado</h2>
 
                 <div class="card shadow p-2">
                     <table class="table table-hover mt-3 dataTable">
@@ -51,12 +51,15 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/datatable.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script>
 
-        $(document).ready( function () {
+        $(document).ready(function() {
             $('.dataTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ],
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
                 }

@@ -4,16 +4,16 @@
 @section('nav.clients', 'active')
 
 @section('head')
-    <link rel="stylesheet" href="{{ asset('datatables/datatables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
+    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/jszip-2.5.0/b-1.5.6/b-html5-1.5.6/b-print-1.5.6/r-2.2.2/datatables.min.css"/> --}}
 @endsection
 
 @section('content')
     
-<div class="container mt-4 mb-5">
+<div class="container-fluid mt-4 mb-5">
     <div class="row">
         <div class="col-md-12">
-            <h2 class="text-center">Lista de personas que han contactado</h2>
+            <h2 class="">Lista de personas que han contactado</h2>
             
             <a href="{{ route('clients.create') }}" class="btn btn-primary my-2">Agregar Nuevo Cliente</a>
             <div class="card shadow p-2">
@@ -69,8 +69,8 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('datatables/datatables.min.js') }}"></script>
+
+    <script src="{{ asset('js/app.js') }}"></script> 
 
     <script src="{{ asset('js/sweetalert2@8.js') }}"></script>
     <script>
@@ -92,8 +92,12 @@
             })
         }
 
-        $(document).ready( function () {
+        $(document).ready(function() {
             $('.dataTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ],
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
                 }

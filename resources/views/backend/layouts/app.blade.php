@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <meta name="theme-color" content="#f15c22"">
+    <meta name="theme-color" content="#f15c22">
     <link rel="shortcut icon" href="{{ asset('images/logo2.png') }}">
 
     @yield('head')
