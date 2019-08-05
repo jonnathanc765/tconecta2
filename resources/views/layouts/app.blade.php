@@ -3,24 +3,24 @@
 <head>
 
     <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MNJTBJ6');
+        })(window,document,'script','dataLayer','GTM-WL4VTPV');
     </script>
     <!-- End Google Tag Manager -->
-
+ 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144841151-2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145131526-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'UA-144841151-2');
+        gtag('config', 'UA-145131526-1');
     </script>
+
 
     <title>{{ config('app.name') }} - @yield('title')</title> 
     <meta name="robots" content="index,follow" />
@@ -52,11 +52,8 @@
     
     <!-- Google Tag Manager (noscript) -->
     <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNJTBJ6" 
-            height="0" 
-            width="0" 
-            style="display:none;visibility:hidden">
-        </iframe>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL4VTPV"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     
