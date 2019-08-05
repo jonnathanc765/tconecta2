@@ -5,13 +5,9 @@
 @endsection
 
 @section('head')
+
     <link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
-    <script type="text/javascript">
-        document.getElementById('send-button').addEventListener('click', function() {
-            fbq('track', 'Contact');
-            document.getElementById('form').submit();
-        }, false);
-    </script>
+    
 @endsection
 
 @section('content')
@@ -221,6 +217,13 @@
 @endsection
 
 @section('scripts')
+
+    <script type="text/javascript">
+        document.getElementById('send-button').addEventListener('click', function() {
+            fbq('track', 'Contact');
+            document.getElementById('form').submit();
+        }, false);
+    </script>
     
     @if ($errors->any())
     <script src="{{ asset('js/sweetalert2@8.js') }}"></script>
