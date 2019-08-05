@@ -78,7 +78,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <script>
-        fbq('track', 'CompleteRegistration');
+        fbq('track', 'Contact');
     </script>
     
     @yield('content')
