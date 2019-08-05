@@ -77,10 +77,7 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <script>
-        fbq('track', 'Contact');
-    </script>
-    
+       
     @yield('content')
     
 

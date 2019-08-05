@@ -6,6 +6,12 @@
 
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
+    <script type="text/javascript">
+        document.getElementById('send-button').addEventListener('click', function() {
+            fbq('track', 'Contact');
+            document.getElementById('form').submit();
+        }, false);
+    </script>
 @endsection
 
 @section('content')
@@ -22,7 +28,7 @@
 
             <div class="col-md-6 col-lg-6">
                 <div class="form">
-                    <form action="{{ route('mails.store') }}" method="POST">
+                    <form action="{{ route('mails.store') }}" method="POST" id="form">
                         {{ csrf_field() }}
                         <div class="inputs">
                             <div class="form-group">
@@ -69,7 +75,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button type="submit">Contratar <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                            <button type="button" id="send-button">Contratar <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
                         </div>
                     </form>
                 </div>
