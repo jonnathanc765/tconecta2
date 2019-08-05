@@ -39,7 +39,6 @@ class ContactController extends Controller
             return view('contacts.failure');
         }
         
-        
         // Correo para mily
         
         $to_name    = $data['name'];
