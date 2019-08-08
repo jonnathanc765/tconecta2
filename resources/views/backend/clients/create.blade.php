@@ -65,14 +65,30 @@
                             <label for="status">Status</label>
                             <select name="status" id="status" class="form-control">
                                 <option value="" disabled selected>Seleccione</option>
-                                <option value="Contactar DM" {{ old('status') == 'Contactar DM' ? 'selected': '' }}>Por contactar DM</option>
-                                <option value="Datos DM" {{ old('status') == 'Datos DM' ? 'selected': '' }}>Datos solicitados por DM</option>
-                                <option value="Contactar WhatsApp" {{ old('status') == 'Contactar WhatsApp' ? 'selected': '' }}>Por contactar WhatsApp</option>
-                                <option value="Datos WhatsApp" {{ old('status') == 'Datos WhatsApp' ? 'selected': '' }}>Datos solicitados por WhatsApp</option>
-                                <option value="Enviar Correo" {{ old('status') == 'Enviar Correo' ? 'selected': '' }}>Poir enviar Email</option>
-                                <option value="Por Llamar" {{ old('status') == 'Por Llamar' ? 'selected': '' }}>Por llamar</option>
-                                <option value="Llamado Interesado" {{ old('status') == 'Llamado Interesado' ? 'selected': '' }}>Llamado interesado</option>
-                                <option value="Llamado desinteresado" {{ old('status') == 'Llamado desinteresado' ? 'selected': '' }}>Llamado no interesado</option>
+                                <optgroup label="Estados">
+                                    <option value="Contactar DM" {{ old('status') == 'Contactar DM' ? 'selected': '' }}>Por contactar DM</option>
+                                    <option value="Datos DM" {{ old('status') == 'Datos DM' ? 'selected': '' }}>Datos solicitados por DM</option>
+                                    <option value="Contactar WhatsApp" {{ old('status') == 'Contactar WhatsApp' ? 'selected': '' }}>Por contactar WhatsApp</option>
+                                    <option value="Datos WhatsApp" {{ old('status') == 'Datos WhatsApp' ? 'selected': '' }}>Datos solicitados por WhatsApp</option>
+                                    <option value="Enviar Correo" {{ old('status') == 'Enviar Correo' ? 'selected': '' }}>Por enviar Email</option>
+                                    <option value="Por Llamar" {{ old('status') == 'Por Llamar' ? 'selected': '' }}>Por llamar</option>
+                                    <option value="Llamado Interesado" {{ old('status') == 'Llamado Interesado' ? 'selected': '' }}>Llamado interesado</option>
+                                    <option value="Llamado desinteresado" {{ old('status') == 'Llamado desinteresado' ? 'selected': '' }}>Llamado no interesado</option>
+                                </optgroup>
+                                <optgroup label="Atención al cliente">
+                                    <option value="ATC: Abandona chat / Luego de informacion" {{ old('status') == 'ATC: Abandona chat / Luego de informacion' ? 'selected': '' }}>Abandona chat / Luego de informacion</option>
+                                    <option value="ATC: Acepta 4 megas" {{ old('status') == 'ATC: Acepta 4 megas' ? 'selected': '' }}>Acepta 4 megas</option>
+                                    <option value="ATC: Caso en seguimiento / Interesado" {{ old('status') == 'ATC: Caso en seguimiento / Interesado' ? 'selected': '' }}>Caso en seguimiento / Interesado</option>
+                                    <option value="ATC: Evaluara Propuesta" {{ old('status') == 'ATC: Evaluara Propuesta' ? 'selected': '' }}>Evaluara Propuesta</option>
+                                    <option value="ATC: Fuera de Huella" {{ old('status') == 'ATC: Fuera de Huella' ? 'selected': '' }}>Fuera de Huella</option>
+                                    <option value="ATC: Huella no Disponible" {{ old('status') == 'ATC: Huella no Disponible' ? 'selected': '' }}>Huella no Disponible</option>
+                                    <option value="ATC: Interesado en residencial" {{ old('status') == 'ATC: Interesado en residencial' ? 'selected': '' }}>Interesado en residencial</option>
+                                    <option value="ATC: No acepta planes" {{ old('status') == 'ATC: No acepta planes' ? 'selected': '' }}>No acepta planes</option>
+                                    <option value="ATC: No se logra comunicacion" {{ old('status') == 'ATC: No se logra comunicacion' ? 'selected': '' }}>No se logra comunicacion</option>
+                                    <option value="ATC: Sin disponibilidad economica" {{ old('status') == 'ATC: Sin disponibilidad economica' ? 'selected': '' }}>Sin disponibilidad economica</option>
+                                    <option value="ATC: Sin respuesta en instagram" {{ old('status') == 'ATC: Sin respuesta en instagram' ? 'selected': '' }}>Sin respuesta en instagram</option>
+                                </optgroup>
+
                             </select>
                         </div>
                         <div class="form-group">

@@ -42,9 +42,8 @@ class DashboardController extends Controller
         }
         
         $test->sortKeys();
-        dd($test);
-
-        dd($test);
+        
+        // dd($test);
 
         return view('backend.dashboard.index', compact('lastYearUserRegistration'));
     }
