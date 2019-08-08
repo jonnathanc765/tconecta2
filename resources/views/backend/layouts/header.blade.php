@@ -31,9 +31,11 @@
                 </div>
             </li> --}}
             {{-- Dropdown --}}
-            {{-- <li class="nav-item @yield('nav.dashboard')">
+
+            <li class="nav-item @yield('nav.dashboard')">
                 <a class="nav-link" href="{{ route('dashboard.index') }}" tabindex="-1"><i class="fa fa-bar-chart mr-2" aria-hidden="true"></i> Estadísticas</a>
-            </li> --}}
+            </li>
+            
         </ul>
 
         <form action="{{ route('logout') }}" id="logout-form" method="POST">
